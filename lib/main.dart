@@ -46,6 +46,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
+                    textAlign: TextAlign.justify,
                     '${storybrain.getStoryTitle()}',
                     style: TextStyle(fontSize: 25.0),
                   ),
@@ -59,9 +60,15 @@ class _StoryPageState extends State<StoryPage> {
                       updateStory(1);
                     },
                     style: TextButton.styleFrom(backgroundColor: Colors.red),
-                    child: Text(
-                      '${storybrain.getChoice1()}',
-                      style: TextStyle(fontSize: 20.0),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 2.0,
+                        horizontal: 14.0,
+                      ),
+                      child: Text(
+                        '${storybrain.getChoice1()}',
+                        style: TextStyle(fontSize: 20.0),
+                      ),
                     ),
                   ),
                 ),
@@ -76,9 +83,15 @@ class _StoryPageState extends State<StoryPage> {
                       updateStory(2);
                     },
                     style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                    child: Text(
-                      '${storybrain.getChoice2()}',
-                      style: TextStyle(fontSize: 20.0),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 2.0,
+                        horizontal: 14.0,
+                      ),
+                      child: Text(
+                        '${storybrain.getChoice2()}',
+                        style: TextStyle(fontSize: 20.0),
+                      ),
                     ),
                   ),
                 ),
